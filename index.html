@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="style.css">
@@ -20,12 +21,12 @@
             </ul>
          </nav>
     </header>
-    <section class="somaire">
+    <section class="profil">
         <img src= "" alt="">
         <h1>Jawad Hamlaoui</h1>
         <div>
-            <a href="" ><button>Télécharger CV</button></a>
-            <a href="#"><button> Contact</button></a>
+            <a ><button class="telecharger">Télécharger CV</button></a>
+            <a href="#"><button class="button-cont"> Contact</button></a>
         </div>
     </section>
     <section class="cart">
@@ -34,23 +35,16 @@
             <div class="parent">
                 <div class="text-presentation">
                     <p> 
-                        Passionné par l’informatique, j’ai effectué une 1ère année de
-                        BUT Informatique afin de consolider mon choix dans ce
-                        secteur.
+                        <span class="vert">Bienvenue sur mon portfolio!</span> Je m'appelle Jawad et je suis en formation pour devenir développeur web et mobile.
                     </p>
                     <br>
                     <p>
-                        Aujourd’hui, j’entreprends une formation en alternance de
-                        Développeur Web afin de bénéficier d’un parcours complet :
-                        un apprentissage au sein de l’organisme de formation, un
-                        investissement professionnel au sein de l’entreprise.
+                        <span class="style-texte">Actuellement à la recherche d'une alternance</span> passionnante dans le domaine, je vous invite à explorer mes projets
+                         pour découvrir mon engagement et ma créativité dans le monde du développement. 
+                         Prêt à relever de nouveaux défis et à contribuer à des projets innovants, je suis impatient de partager 
+                         mon parcours avec vous.
                     </p>
-                    <br>
-                    <p>
-                        Grâce à mes travaux saisonniers dans le secteur de l'animation,
-                        j'ai également acquis des compétences humaines, devenant
-                        ainsi une personne sociable, dynamique et responsable.
-                    </p>
+
                 </div>
                     <ul>
                         <li><p>Age:</p> <span>19ans</span></li>
@@ -97,7 +91,7 @@
                 <h3>COMPETENCES</h3>
                 <div class="parent-competence">
                     
-                    <div class="liste-competence">
+                    <div class="liste-developpement">
                         <h4>Développement</h4>
                         <ul>
                             <li>
@@ -174,18 +168,40 @@
                         </ul>
                     </div>
                 </div>
-                <div class="code">
-                     <h4>Langage programation</h4>
-                        <div class="html" id="">
+                <div class="L-prog">
+                    <h4>Langage programation</h4>
+                    <div class="contenaire">
+                        <div class="html" id="cart-code">
                             <p>HTML/CSS</p>
                             <div class="r-ponrcentage"> 
                              <span>80%</span>        
                             </div>
                         </div>
-                        
-                        
+                        <div class="js" id="cart-code">
                             <p>JavaScript</p>
-                </di>
+                            <div class="r-ponrcentage"> 
+                             <span>60%</span>        
+                             </div>
+                        </div>
+
+                     </div>
+                     <div class="contenaire" >
+                        <div class="react" id="cart-code">
+                            <p>React</p>
+                            <div class="r-ponrcentage"> 
+                             <span>40%</span>        
+                            </div>
+                        </div>
+                        <div class="php" id="cart-code">
+                            <p>PHP</p>
+                            <div class="r-ponrcentage"> 
+                             <span>10%</span>        
+                             </div>
+                        </div>
+
+                     </div>
+                    
+                </div>
              </div>
              
            
@@ -195,21 +211,45 @@
             <h2>
                 PROJET
             </h2>
-            <div class="contenaire">
-                <div>
-                    <img src="" alt="">
+            <div class="ligne">
+                <div class="block-projet" id="block-projet-1">
+                    <ul>
+                        <li class="iteam1" id="premier-block">
+                            <a href="projet/page_acceuil.html"><img src="photo/Untitled (2).svg" alt=""></a>
+                            <h3>Kebab du crous</h3>
+                            <p>Ce projet a ete raliser durant mon année de BUT Infomatique,
+                                il consiste a disagné et integre un site vitrine pour la cafetaria su crous.
+                            </p>
+                        </li>
+                        <li class="iteam2">
+                            <a href="projet/spacePospection.html"><img src="photo/spaceptopesction.png" alt=""></a>
+                            <h3>Space Prospection</h3>
+                            <p> Ce projet a ete realiser durant ma formation chez onlineFormapro, le but ete d'integre une maquette.
+                                
+                            </p>
+                        </li>
+                    </ul>
+                    
+                </div>
+                <div class="block-projet" id="block-projet-2" >
+                    <ul>
+                        <li class="iteam2" id="premier-block">
+                            <a href=""><img src="" alt=""></a>
+                            <h3>CSS ZenGarden</h3>
+                            <p>
+                                Ce projet a ete realiser durant ma formation chez onlineFormapro,le but etais de disagner une maquette et de la reproduire (projet pas terminer)
+                            </p>
+                        </li>
+                        <li class="iteam1" id="iteam">
+                            <a href=""><img src="" alt=""></a>
+                            <h3> Projet Marvel</h3>
+                            <p>
+                                Ce projet a ete realiser durant ma formation chez onlineFormapro, il a pour but d'utiliser une API et de cree un siyte avec. (projet en court).
+                            </p>
+                        </li>
+                    </ul>
 
                 </div>
-                <button>button</button>
-                <div>
-
-                </div>
-                <button>
-
-                </button>
-            
-            
-
             </div>
 
         </div>
@@ -217,17 +257,55 @@
             <h2>
                 CONTACT
             </h2>
-            <div>
-                <p>NUM</p>
-                <p>ADRESSE</p>
-            </div>
-            <p>MAIL</p>
-            <h2> ENVOIE MESSAGE</h2>
-            <div>
-                <p>mail.</p>
-                <p>DEZF</p>
-            </div>
-            <input type="text">
+            <div class="contact">
+                <div class="information">
+                    <ul>
+                        <li>
+                            <div class="num">
+                                <p>Num. . . . . </p>
+                                <a href="tel:+33">0624472871</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="mail">
+                                <p>Mail. . . . .  </p>
+                                <a href="mailto:jawad.hamlaoui@gmail.com">jawad.hamlaoui@gmail.com</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <p>Adresse. . . . .</p>
+                                <Address>28 Rue Des Antonins</Address>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+            <h3> ENVOIE MESSAGE</h2>
+            <form id="cfrom" action="https://api.staticforms.xyz/submit" method="post">
+                <input type="hidden" name="accessKey" value="57bbae19-5bc5-454f-92f5-eea75a1e753d">
+                <div>
+                    
+                    <div class="np">
+                        <input type="text" name="name" placeholder="NOM">
+                        <input type="text" name="$prenom" placeholder="PRENOM">
+                    </div>
+                    <input type="text" name="email" placeholder="MAIL">
+        
+                </div>
+                
+                <div class="message">
+                    <textarea name="message" placeholder="Votre message"></textarea>
+                    <input type="hidden" name="replyTo" value="@"> 
+                    <input type="hidden" name="redirectTo" value="https://example.com/contact/success">
+                    <button class="sub-button" type="submit" value="Envoyer " >
+                        Envoyer
+                        <i class="fa-solid fa-check"></i>
+                    </button>
+                    
+                </div>
+            </form>
+            
         </div>
 
     </section>

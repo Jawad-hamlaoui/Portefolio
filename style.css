@@ -1,3 +1,4 @@
+/*RESET DE LA PAGE*/
 *{
     margin: 0;
     padding: 0;
@@ -21,13 +22,16 @@
     background-color: #9e9e9e;
     border-radius: 10px;
   }
+
 body{
     background-color:#26262D ;
     display: flex;
     justify-content: center;
     height: 100vh;
     align-items:center ;
+    font-family: Poppins;
 }
+/* ===============disgne de la bar nav===================*/
 header{
     z-index: 100;
 }
@@ -75,9 +79,12 @@ a:nth-child(){
 
 a:hover{
     color:#76C86C ;
+    transition: all 1s ease-out;
 }
+/* ======================================fin bar nav================================*/
 
-.somaire{
+/* =================================Disagne de la carte profil=======================*/
+.profil{
     text-align: center;
     position: relative;
     height: 42em;
@@ -91,18 +98,30 @@ a:hover{
     align-items: center;
     box-shadow: 5px 1px 10px rgb(0, 0, 0),-1.9em -1.3em 0 .6em  #2A2A30;
 }
-.somaire>img{
+.profil>img{
     margin-top: 40px;
 }
 h1{
     position: absolute;
     bottom: 100px;
 }
-.somaire div{
+.profil div{
     margin-top: 100px;
     display: flex;
 }
-.somaire button{
+.button-cont {
+    border-radius: 20px;
+    border-width:0px ;
+    border-style: solid;
+    border-top-width:1px ;
+    border-left-width:1px;
+    height: 70px;
+    width: 240px;
+    background-color: #31313A;
+    border-image: linear-gradient(50deg, rgba(62,62,62,1) 0%, rgba(242,242,242,1) 100%)1;
+}
+.telecharger {
+    border-radius: 20px;
     border-width:0px ;
     border-style: solid;
     border-top-width:1px ;
@@ -111,29 +130,41 @@ h1{
     width: 240px;
     background-color: #31313A;
     border-image: linear-gradient(50deg, rgba(242,242,242,1) 0%, rgba(62,62,62,1) 100%)1;
-        
-       
-        
 }
-.somaire>div>a>button:first-of-type{
-    border-bottom-left-radius: 20px;
-    
-}
-.somaire>div>a:last-of-type>button{
-    border-bottom-right-radius: 20px;
-    border-image:linear-gradient(90deg, rgba(62,62,62,1) 0%, rgba(242,242,242,1) 100%)1;
-    border-left:none ; 
-    border-right: none;
-}
-.somaire img{
+.profil img{
     width:380px ;
     height: 475px;
 }
-.somaire>div>a>button:hover{
+.telecharger:hover{
     color: #76C86C;
+    transition: all 1s ease-out;
+    border-image:linear-gradient(90deg, #76C88C  0%,rgba(62,62,62,1)  100%)1;
+
+    
+
 }
+
+.button-cont:hover{
+    color: #76C86C;
+    transition: all 1s ease-out;
+    border-image:linear-gradient(50deg, rgba(62,62,62,1) 0%,#76C88C   100%)1;
+
+
+}
+
+
+
+/*==================================fin du profil==============================*/
+
+
+
+
+/*===============================disgene des carte============================*/
+
+
+
+/*=============================disgen de la cart A propos======================*/
 #A-Propos{
-    display: none;
     width: 35em;
     height: 39em;
     background-color: #31313A;
@@ -157,18 +188,28 @@ h2{
     font-size: 13px;
 }.parent{
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.text.presentation{
-    margin-left: 30px;
-    width: 380px;
-    font-size: 13px;
+.vert{
+    color: #76C86C;
+}
+.style-texte{
+    text-decoration: underline;
+    color: #76C86C;
+}
+.text-presentation{
+    padding-left: 30px;
+    padding-bottom: 20px;
+    width: 480px;
+    font-size: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 30px;
     padding-right:10px ;   
     color: #000000;
-    border-right: 1px solid;
+    border-bottom: 1px solid;
     border-image:linear-gradient(295deg, rgba(62,62,62,1) 0%, rgba(242,242,242,1) 100%)1; ;
     
 
@@ -179,7 +220,7 @@ h2{
     align-items: center;
     justify-content: space-evenly;
     height: 250px;
-    width: 300px;
+    width: 100px;
     padding: 20px;
 
 }.parent li{
@@ -194,6 +235,7 @@ h2{
     background-color: #76C86C;
     padding: 5px;
     border-radius: 5px;
+    width: 100px;
 }
 #A-Propos h3{
     color: #dcdcdc;
@@ -226,8 +268,9 @@ h2{
 .service h4{
     color: #9e9e9e;
 }
-
+/*===============================disagne cart CV=========================*/
 #cv{
+    display: none;
     width: 35em;
     height: 39em;
     background-color: #31313A;
@@ -240,7 +283,7 @@ h2{
 #cv i{
     color: #76C86C;
 }
-
+/* ==============================CV partie Formation===================*/
 .formation{
     display: flex;
     flex-direction: column;
@@ -288,6 +331,7 @@ h2{
 .formation div>p:last-of-type{
     font-size: 13px;
 }
+/*========================== CV partie competence===================*/
 .competence h3{
     color: #dcdcdc;
     text-align: center;
@@ -299,7 +343,8 @@ h2{
 .parent-competence{
     display: flex;
 }
-.liste-competence{
+/*======================Competence parie développement==============*/
+.liste-developpement{
     display: flex;
     flex-direction: column;
     margin-left: 20px;
@@ -308,28 +353,51 @@ h2{
     padding-bottom: 10px;
     width: 250px;
 }
-.liste-competence h4{
+.liste-developpement h4{
+    color: #9c9b9b;
     text-align: center;
     padding: 15px;
     border-bottom: 1px solid;
     border-image:linear-gradient(90deg, rgba(242, 242, 242, 0.363) 0%, rgba(62, 62, 62, 0.486) 100%)1;
 }
-.liste-competence ul{
+.liste-developpement ul{
     padding-top: 10px;
     border-right: 1px solid;
     border-image:linear-gradient(190deg, rgba(242, 242, 242, 0.363) 0%, rgba(62, 62, 62, 0.486) 100%)1;
 }
-.liste-competence li{
+.liste-developpement li{
     padding: 10px;
     border-bottom: 1px solid;
     border-image:linear-gradient(90deg, rgba(242, 242, 242, 0.363) 0%, rgba(62, 62, 62, 0.486) 100%)1;
 }
-.liste-competence li:last-of-type{
+.liste-developpement li:last-of-type{
     border-bottom: none;
 }
-.liste-competence li p{
+.liste-developpement li p{
     color: #9c9b9b;
 }
+.progress{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #9e9e9e;
+    margin: 10px;
+    border-radius: 6px;
+}
+.pourcentage{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #76C86C;
+    border-radius: 6px;
+}
+
+
+/*=============================== Competence partie Langue===============*/
+
+
 .liste-langage{
     display: flex;
     flex-direction: column;
@@ -337,6 +405,7 @@ h2{
     width: 275px;
 }
 .liste-langage h4{
+    color: #9b9b9b;
     text-align: center;
     margin-top: 10px;
     padding: 15px;
@@ -361,23 +430,6 @@ h2{
 .liste-langage li p{
     color: #9c9b9b;
 }
-.code{
-    margin-left: 30px;
-}
-.code h4{
-    text-align: center;
-    width: 480px;
-    padding: 20px;
-}
-.code ul li{
-    display: inline-block;
-    width: 45%;
-    text-align: center;
-}
-.ligne{
-    display: flex;
-}
-
 .rond{
     background-color: #9e9e9e;
     width: 10px;
@@ -388,26 +440,45 @@ h2{
 #r-vert{
     background-color: #76C86C;
 }
-.progress{
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 4px;
-    background-color: #9e9e9e;
-    margin: 10px;
-    border-radius: 6px;
-}
-.pourcentage{
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    background-color: #76C86C;
-    border-radius: 6px;
-}
 
 
-.r-ponrcentage{
+/*======================= Competence partie langage progamation=============*/
+
+
+.L-prog{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.L-prog h4{
+    color: #9c9b9b;
+}
+.contenaire{
+    display:flex ;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    width: 500px;
+    border-bottom: 1px solid;
+    padding-bottom: 20px;
+    border-image:linear-gradient(90deg, rgba(242, 242, 242, 0.363) 0%, rgba(62, 62, 62, 0.486) 100%)1;
+}
+.contenaire:last-of-type{
+    border-bottom: none;
+}
+#cart-code{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+#cart-code:nth-child(1){
+    border-right:1px solid ;
+    border-image: linear-gradient(180deg, rgba(242, 242, 242, 0.363) 0%, rgba(62, 62, 62, 0.486) 100%) 1;
+    padding-right: 80px;
+}
+.html .r-ponrcentage{
     margin-top:10px ;
     display: flex;
     align-items:center ;
@@ -419,14 +490,252 @@ h2{
         radial-gradient(closest-side, #31313A 78%, transparent 80% 100%),
         conic-gradient(#76C86C 80%,#9c9b9b 0);  
 }
+.js .r-ponrcentage{
+    margin-top:10px ;
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: 
+        radial-gradient(closest-side, #31313A 78%, transparent 80% 100%),
+        conic-gradient(#76C86C 60%,#9c9b9b 0);  
+}
+.react .r-ponrcentage{
+    margin-top:10px ;
 
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: 
+        radial-gradient(closest-side, #31313A 78%, transparent 80% 100%),
+        conic-gradient(#76C86C 40%,#9c9b9b 0);  
+}
+.php .r-ponrcentage{
+    margin-top:10px ;
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: 
+        radial-gradient(closest-side, #31313A 78%, transparent 80% 100%),
+        conic-gradient(#76C86C 10%,#9c9b9b 0);  
+}
+.ligne{
+    display: flex;
+}
 
-
-
+/*==============================Disagne cart Projet=======================*/
 #projet{
     display: none;
+    width: 35em;
+    height: 39em;
+    background-color: #31313A;
+    border-radius:5px ;
+    position: relative;
+    right:10px;
+    overflow-y: scroll;
 }
+.block-projet{
+    padding-top:20px ;
+    padding-left:20px ;
+}
+.block-projet ul{
+    width: 15em;
+}
+.block-projet h3{
+    color:#f4f4f4;
+}
+.block-projet p{
+    color: #9c9b9b;
+}
+.iteam1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: auto;
+ 
+}
+.iteam2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: auto;
+ 
+}
+.iteam1:hover h3{
+    color: #76C86C;
+    transition: all 1s ease-out;
+}
+.iteam2:hover h3{
+    color: #76C86C;
+    transition: all 1s ease-out;
+}
+
+.iteam1 img{
+    width: 100%;
+    height: 20em;
+    margin: 10px;
+   object-fit: cover;
+   border-radius: 4px;
+   box-shadow: 3px 3px  7px black;
+}
+.iteam2 img{
+    width: 15em;
+    margin: 10px;
+   object-fit: cover;
+   border-radius: 4px;
+   box-shadow: 3px 3px  7px black;
+}
+.iteam p{
+    font-size: small;
+}
+#premier-block{
+    margin-bottom: 30px;
+}
+#block-projet-1{
+    border-right: 1px solid;
+    border-image: linear-gradient(180deg, rgba(242, 242, 242, 0.363) 0%, rgba(62, 62, 62, 0.486) 100%)1;
+    width: 105em;
+}
+
+
+/*==============================Disagne cart Conctact*=======================*/
 
 #Contact{
     display: none;
+    width: 35em;
+    height: 39em;
+    background-color: #31313A;
+    border-radius:5px ;
+    position: relative;
+    right:10px;
+    overflow-y: scroll;
+}
+.contact{
+    text-align: center;
+}
+
+.information li{
+    display: inline-block;
+    width: 47%;
+    padding-top: 35px;
+    font-size: 16px;
+}
+.information li:first-of-type{
+    margin-left: 10px;
+}
+.information li div{
+    display: flex;
+    color: #9b9b9b;
+}
+
+.contact h3{
+    color: #dcdcdc;
+    text-align: center;
+    margin-top: 25px;
+    border-bottom: 1px solid;
+    text-align: start;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    border-image:linear-gradient(90deg, rgba(242, 242, 242, 0.363) 0%, rgba(62, 62, 62, 0.486) 100%)1;
+}
+#cfrom{
+    margin-top: 50px;
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+}
+#cfrom .sub-button{
+    border: none;
+    margin-top: 10px;
+}
+#cfrom input{
+    background-color:#31313A;
+    border: none;
+    border-bottom: 1px solid ;
+    border-image:linear-gradient(90deg, rgba(242, 242, 242, 0.363) 0%, rgba(62, 62, 62, 0.486) 100%)1;
+    height: 50px;
+    width: 40%;
+    margin-bottom: 20px;
+
+
+}
+
+#cfrom input:focus{
+    outline: none;
+    border-bottom: 2px solid;
+    border-image:linear-gradient(90deg, #76C86C 0%, rgba(62, 62, 62, 0.486) 100%)1;
+    transition: all 1s ease-out;
+    
+}
+#cfrom input:focus::placeholder{
+    color: #f4f4f4;
+}
+.message{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.message textarea{
+    background-color: #31313A;
+    border: none;
+    height: 100px;
+    width: 80%;
+    outline: none;
+    border-bottom: 1px solid;
+    border-image:linear-gradient(90deg, rgba(242, 242, 242, 0.363) 0%, rgba(62, 62, 62, 0.486) 100%)1;
+
+}
+.message textarea:focus{
+    border-image:linear-gradient(90deg, #76C86C 0%, rgba(62, 62, 62, 0.486) 100%)1;
+    transition: all 1s ease-out;
+}
+.message textarea:focus::placeholder{
+    color: aliceblue;
+}
+.message button{
+    margin-top: 20px;
+    background-color: #31313A;
+    border: none;
+    width: 30%;
+    color:#9c9b9b;
+    transition: all 1s ease-out;;
+}
+.np{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.message button:hover{
+    color: #76C86C;
+    transition: all 1s ease-out;
+}
+.mail a{
+    color:#9c9b9b;
+    margin-left: 10px;
+}
+.num a{
+    color: #9c9b9b;
+    margin-left: 10px;
+}
+address{
+    margin-left: 10px;
 }
