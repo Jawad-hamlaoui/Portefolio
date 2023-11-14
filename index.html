@@ -5,32 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Portfolio</title>
 </head>
 <body>
     <header>
          <nav>
-            <ul>
+            <ul class="tabs" data-tabs>
                 
-                <li><a href="#"><i class="fa-solid fa-user"></i>A PROPOS</a></li>
-                <li><a href="#"><i class="fa-solid fa-newspaper"></i>CV</a></li>
-                <li><a href="#"><i class="fa-solid fa-marker"></i>PROJET</a></li>
-                <li><a href="#"><i class="fa-solid fa-at"></i>CONTACT</a></li>
+                <li><a data-tabby-default href="#Apropos" data-tabby-toggle><i class="fa-solid fa-user"></i>A PROPOS</a></li>
+                <li><a href="#cv" data-tabby-toggle><i class="fa-solid fa-newspaper"></i>CV</a></li>
+                <li><a href="#projet" data-tabby-toggle><i class="fa-solid fa-marker"></i>PROJET</a></li>
+                <li><a href="#contact" data-tabby-toggle><i class="fa-solid fa-at"></i>CONTACT</a></li>
             </ul>
          </nav>
     </header>
     <section class="profil">
-        <img src= "" alt="">
+        <img src= "/photo/IMG-3456.png" alt="">
         <h1>Jawad Hamlaoui</h1>
-        <div>
-            <a ><button class="telecharger">Télécharger CV</button></a>
-            <a href="#"><button class="button-cont"> Contact</button></a>
-        </div>
+        <ul class="tabs" data-tabs>
+            <li>
+                <a href="CV/CV_Jawad_Hamloui.pdf" download="CV_Jawad_Hamloui"><button class="telecharger">Télécharger CV</button></a> 
+            </li>
+            <li>
+                <a href="#contact" data-tabby-toggle><button id="ext-btn" class="button-cont"> Contact</button></a>
+            </li>
+        </ul>
+            
     </section>
     <section class="cart">
-        <div id="A-Propos">
+        <div id="Apropos" class="tab-content">
             <h2>A PROPOS</h2>
             <div class="parent">
                 <div class="text-presentation">
@@ -57,14 +62,16 @@
             <div class="service">
                 <i class="fa-solid fa-file-code"></i>
                 <h4>Web Développeur</h4>
-                <p>Grâce à mes travaux saisonniers dans le secteur de l'animation,
-                    j'ai également acquis des compétences humaines, devenant
-                    ainsi une personne sociable, dynamique et responsable.</p>
+                <p>En tant que développeur junior, je vous propose des solutions sur mesure pour 
+                    concrétiser vos idées en ligne. De la création de sites web percutants à des applications web
+                     personnalisées, je suis là pour transformer vos concepts en réalité. Avec une expertise solide,
+                      je m'engage à fournir des solutions web efficaces et esthétiquement plaisantes. Façonnons ensemble 
+                      votre présence en ligne exceptionnelle.</p>
             </div>
             
 
         </div>
-        <div id="cv">
+        <div id="cv" class="tab-content">
             <h2>CV</h2>
             <div class="formation">
                 <h3><i class="fa-solid fa-school"></i> FORMATION</h3>
@@ -207,7 +214,7 @@
            
 
         </div>
-        <div id="projet">
+        <div id="projet" class="tab-content" >
             <h2>
                 PROJET
             </h2>
@@ -215,14 +222,14 @@
                 <div class="block-projet" id="block-projet-1">
                     <ul>
                         <li class="iteam1" id="premier-block">
-                            <a href="projet/page_acceuil.html"><img src="photo/Untitled (2).svg" alt=""></a>
+                            <a href="projet/page_acceuil.html"><img src="photo/Untitled (2).svg" alt=" boici une photo montage qui represente mon projet du kebab du crous"></a>
                             <h3>Kebab du crous</h3>
                             <p>Ce projet a ete raliser durant mon année de BUT Infomatique,
                                 il consiste a disagné et integre un site vitrine pour la cafetaria su crous.
                             </p>
                         </li>
                         <li class="iteam2">
-                            <a href="projet/spacePospection.html"><img src="photo/spaceptopesction.png" alt=""></a>
+                            <a href="projet/spacePospection.html"><img src="photo/spaceptopesction.png" alt="image de la page d'aceuille, on y voit un satelite avce une image en fond representent l'espace."></a>
                             <h3>Space Prospection</h3>
                             <p> Ce projet a ete realiser durant ma formation chez onlineFormapro, le but ete d'integre une maquette.
                                 
@@ -234,14 +241,14 @@
                 <div class="block-projet" id="block-projet-2" >
                     <ul>
                         <li class="iteam2" id="premier-block">
-                            <a href=""><img src="" alt=""></a>
+                            <a href=""><img src="photo/kitty-mur-monochrome-derriere-elle.jpg" alt="image de mon projet CSS ZenGarden on voit une page d'aceuille avce un theme sur l'espace"></a>
                             <h3>CSS ZenGarden</h3>
                             <p>
                                 Ce projet a ete realiser durant ma formation chez onlineFormapro,le but etais de disagner une maquette et de la reproduire (projet pas terminer)
                             </p>
                         </li>
                         <li class="iteam1" id="iteam">
-                            <a href=""><img src="" alt=""></a>
+                            <a href=""><img src="photo/kitty-mur-monochrome-derriere-elle.jpg" alt="image de mon projet Marvelle, on peut y voir la premiere page d'acceuil"></a>
                             <h3> Projet Marvel</h3>
                             <p>
                                 Ce projet a ete realiser durant ma formation chez onlineFormapro, il a pour but d'utiliser une API et de cree un siyte avec. (projet en court).
@@ -253,7 +260,7 @@
             </div>
 
         </div>
-        <div id="Contact">
+        <div id="contact" class="tab-content">
             <h2>
                 CONTACT
             </h2>
@@ -281,6 +288,7 @@
                         
                     </ul>
                 </div>
+            </div>
             <h3> ENVOIE MESSAGE</h2>
             <form id="cfrom" action="https://api.staticforms.xyz/submit" method="post">
                 <input type="hidden" name="accessKey" value="57bbae19-5bc5-454f-92f5-eea75a1e753d">
@@ -309,6 +317,8 @@
         </div>
 
     </section>
+    <script src="tabby.js"></script>
+    <script src="scripts.js"></script>
     
 </body>
 </html>

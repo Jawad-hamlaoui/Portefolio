@@ -81,6 +81,9 @@ a:hover{
     color:#76C86C ;
     transition: all 1s ease-out;
 }
+a:active{
+    color: #76C86C;
+}
 /* ======================================fin bar nav================================*/
 
 /* =================================Disagne de la carte profil=======================*/
@@ -99,18 +102,28 @@ a:hover{
     box-shadow: 5px 1px 10px rgb(0, 0, 0),-1.9em -1.3em 0 .6em  #2A2A30;
 }
 .profil>img{
-    margin-top: 40px;
+    position: absolute;
+    box-shadow: -20px 15px 5px#76C86C ;
+    border: 4px solid #2A2A30;
+    
+
+}
+.profil ul {
+    position: absolute;
+    bottom: 0;
+    display:flex ;
+    margin-top: 90px;
 }
 h1{
     position: absolute;
-    bottom: 100px;
+    bottom: 200px;
 }
 .profil div{
     margin-top: 100px;
     display: flex;
 }
 .button-cont {
-    border-radius: 20px;
+    border-bottom-right-radius:5px ;
     border-width:0px ;
     border-style: solid;
     border-top-width:1px ;
@@ -121,7 +134,7 @@ h1{
     border-image: linear-gradient(50deg, rgba(62,62,62,1) 0%, rgba(242,242,242,1) 100%)1;
 }
 .telecharger {
-    border-radius: 20px;
+    border-bottom-left-radius: 5px;
     border-width:0px ;
     border-style: solid;
     border-top-width:1px ;
@@ -132,16 +145,16 @@ h1{
     border-image: linear-gradient(50deg, rgba(242,242,242,1) 0%, rgba(62,62,62,1) 100%)1;
 }
 .profil img{
-    width:380px ;
-    height: 475px;
+    width:150px ;
+    height: 155px;
+    border-radius: 100px;
+    position: absolute;
+    bottom: 350px;
 }
 .telecharger:hover{
     color: #76C86C;
     transition: all 1s ease-out;
     border-image:linear-gradient(90deg, #76C88C  0%,rgba(62,62,62,1)  100%)1;
-
-    
-
 }
 
 .button-cont:hover{
@@ -164,7 +177,7 @@ h1{
 
 
 /*=============================disgen de la cart A propos======================*/
-#A-Propos{
+#Apropos{
     width: 35em;
     height: 39em;
     background-color: #31313A;
@@ -182,10 +195,11 @@ h2{
  border-image: linear-gradient(90deg, rgba(242,242,242,1) 0%, rgba(62,62,62,1) 100%)1;
 }
 
-#A-Propos>div>p{
+#Apropos>div>p{
     margin-left: 20px;
     width: 380px;
     font-size: 13px;
+    
 }.parent{
     display: flex;
     flex-direction: column;
@@ -208,7 +222,7 @@ h2{
     align-items: center;
     padding-top: 30px;
     padding-right:10px ;   
-    color: #000000;
+    color: rgb(196, 196, 195);
     border-bottom: 1px solid;
     border-image:linear-gradient(295deg, rgba(62,62,62,1) 0%, rgba(242,242,242,1) 100%)1; ;
     
@@ -228,7 +242,7 @@ h2{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 300px;
+    width: 360px;
 
 }
 .parent li p{
@@ -237,7 +251,10 @@ h2{
     border-radius: 5px;
     width: 100px;
 }
-#A-Propos h3{
+.parent li span{
+    color:rgb(196, 196, 195); 
+}
+#Apropos h3{
     color: #dcdcdc;
     padding: 20px;
    font-size: 25px;
@@ -252,7 +269,7 @@ h2{
 
 }
 .service i{
-    margin-top: 10px;
+    margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -268,9 +285,14 @@ h2{
 .service h4{
     color: #9e9e9e;
 }
+.service p {
+    color: rgb(196, 196, 195) ;
+    text-align: center;
+    padding: 30px;
+}
 /*===============================disagne cart CV=========================*/
 #cv{
-    display: none;
+    
     width: 35em;
     height: 39em;
     background-color: #31313A;
@@ -533,7 +555,7 @@ h2{
 
 /*==============================Disagne cart Projet=======================*/
 #projet{
-    display: none;
+   
     width: 35em;
     height: 39em;
     background-color: #31313A;
@@ -616,8 +638,8 @@ h2{
 
 /*==============================Disagne cart Conctact*=======================*/
 
-#Contact{
-    display: none;
+#contact{
+    
     width: 35em;
     height: 39em;
     background-color: #31313A;
@@ -644,7 +666,7 @@ h2{
     color: #9b9b9b;
 }
 
-.contact h3{
+#contact h3{
     color: #dcdcdc;
     text-align: center;
     margin-top: 25px;
@@ -659,6 +681,7 @@ h2{
     width: 550px;
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 #cfrom .sub-button{
     border: none;
